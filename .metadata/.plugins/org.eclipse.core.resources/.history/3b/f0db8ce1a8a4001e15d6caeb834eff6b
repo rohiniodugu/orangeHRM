@@ -1,0 +1,18 @@
+package com.gmail;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class GmailLogintest {
+
+	public static void main(String[] args) {
+	WebDriver driver;
+	String Applicaytionurladdress="https://gmail.com";
+	System.setProperty("webdriver.crome.driver","./webDriverFiles/chromedriver.exe");
+	driver=new ChromeDriver();
+	driver.get(Applicaytionurladdress);
+	driver.manage().window().maximize();
+
+	}
+
+}

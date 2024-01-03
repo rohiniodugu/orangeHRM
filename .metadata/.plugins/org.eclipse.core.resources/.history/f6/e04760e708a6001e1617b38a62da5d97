@@ -1,0 +1,66 @@
+package com.OrangeHRMApplicationwebpages;
+
+
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+
+import com.BaseTest.BaseTest;
+
+
+public class OrangeHRMApplication_Loginpage extends BaseTest
+{
+	
+public  OrangeHRMApplication_Loginpage()  // when the java class name and method names are similar the this is called as constructor
+{
+	PageFactory.initElements(driver, this);
+}
+//this java class is reffered to as  an object repositoryclass
+
+	Loginpanel=driver.findElement(By.id(" loginPanelHeading"));
+	@FindBy(id=" loginPanelHeading")WebElement OrangeHRMApplicationLoginpage_Loginpanel;
+	 public void OrangeHRMApplicationLoginpage_Loginpanelvalidation()
+	 {
+		String  expected_OrangeHRMApplicationLoginpage_LoginpanelText="LOGINPanel" ;
+		Log.info("expected_OrangeHRMApplicationLoginpage_LoginpanelText is:-"+expected_OrangeHRMApplicationLoginpage_LoginpanelText);
+		
+		String  actual_OrangeHRMApplicationLoginpage_LoginpanelText=OrangeHRMApplicationLoginpage_Loginpanel.getText();
+		Log.info("actual_OrangeHRMApplicationLoginpage_LoginpanelText is:-"+actual_OrangeHRMApplicationLoginpage_LoginpanelText);
+		
+		if( actual_OrangeHRMApplicationLoginpage_LoginpanelText.equals(expected_OrangeHRMApplicationLoginpage_LoginpanelText))
+		{
+			Log.info("OrangeHRMApplicationLoginpage_LoginpanelTextis matched-passed");
+		}
+		else
+		{
+			Log.info("OrangeHRMApplicationLoginpage_LoginpanelTextis not matched -fail");
+		}
+		
+	 }
+	 @FindBy(xpath="//*[@id=\"divLogo\"]/img")WebElement OrangeHRMApplicationLoginpageimage;
+	 public void OrangeHRMApplicationLoginpage_Logovalidation()
+	 {
+		 boolean flag=OrangeHRMApplicationLoginpageimage.isDisplayed();
+		 if(flag)
+		 {
+			 Log.info("OrangeHRMApplicationLoginpageimage existing is-pass");
+		 }
+		 else
+		 {
+			 Log.info("OrangeHRMApplicationLoginpageimage existing is-fail");
+		 }
+	 }
+}
+	 
+	
+
+
+
+	
+		
+
+	
+
+}

@@ -1,0 +1,20 @@
+package com.xpath;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Amazon_Customer_service_click {
+public static void main(String[] args) {
+	
+
+		WebDriver driver;
+		String Applicaytionurladdress="https://amazon.com";
+		System.setProperty("webdriver.chrome.driver","./webDriverFiles/chromedriver.exe");
+		driver=new ChromeDriver();
+		driver.get(Applicaytionurladdress);
+		driver.manage().window().maximize();
+		
+
+	}
+
+}

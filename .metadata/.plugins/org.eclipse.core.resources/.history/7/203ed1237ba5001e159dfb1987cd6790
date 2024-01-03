@@ -1,0 +1,25 @@
+package com.OrangeHRMApplicationwebpages;
+
+import org.openqa.selenium.support.PageFactory;
+
+import com.BaseTest.BaseTest;
+
+public class OrangeHRMApplication_Loginpage extends BaseTest
+{
+	
+public  OrangeHRMApplication_Loginpage()  // when the java class name and method names are similar the this is called as constructor
+{
+	PageFactory.initElements(driver, this );
+}
+//this java class is reffered to as  an object repositoryclass
+
+	
+
+
+
+	
+		
+
+	
+
+}

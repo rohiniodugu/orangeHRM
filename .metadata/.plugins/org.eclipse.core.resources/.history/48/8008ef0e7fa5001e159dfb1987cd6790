@@ -1,0 +1,36 @@
+package com.OrangeHRMApplicationwebpages.copy;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.seleniumhq.jetty9.util.log.Log;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+
+public class BaseTest {
+ public static WebDriver driver;
+	String applicationUrlAddress="http://127.0.0.1/orangehrm-4.2.0.1/symfony/web/index.php/dashboard";
+
+	@BeforeMethod
+public void applicationlaunch()
+{
+	System.setProperty("webdriver.chrome.driver","./webDriverFiles/chromedriver.exe");
+	driver = new ChromeDriver();
+
+	Log.info(" ********* Chrome Browser Launched Successfully *********");
+
+	driver.get(applicationUrlAddress);
+	Log.info(" Navigated to OrangeHRM Application ");
+	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+
+}
+@AfterMethod
+public void applicationclose() {
+	driver.quit();
+}
+
+}

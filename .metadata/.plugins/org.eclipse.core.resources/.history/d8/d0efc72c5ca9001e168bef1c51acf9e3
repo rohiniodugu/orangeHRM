@@ -1,0 +1,65 @@
+package com.StepDefination;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import jdk.internal.org.jline.utils.Log;
+
+public class OrangeHRMApplicationMethods {
+    WebDriver driver;
+	String applicationUrlAddress="http://127.0.0.1/orangehrm-4.2.0.1/symfony/web/index.php/dashboard";
+
+	public OrangeHRMApplicationMethods(Hooks hooks)//a class name similar  to method name -it is a constructor 
+	{
+		driver=hook.driver;
+	}
+	@Given("user should open the Browser in the system")
+	public void user_should_open_the_browser_in_the_system() {
+		/*System.setProperty("webdriver.chrome.driver","./webDriverFiles/chromedriver.exe");
+		driver = new ChromeDriver();
+		Log.info("****chromebrowser launched successfully******");*/
+
+	  
+	}
+
+	@When("User enters Application Url Address")
+	public void user_enters_application_url_address() {
+		driver.get(applicationUrlAddress);
+		Log.info("****Entered OrangeHRm Appliaction  url address******");
+		driver.manage().window().maximize();
+		
+
+
+	  
+	}
+
+	@Then("User should be navigated to OrangeHRM Application LogIn Page")
+	public void user_should_be_navigated_to_orange_hrm_application_log_in_page() {
+	  
+	}
+
+	@Then("User should enter userName and password and click on login button")
+	public void user_should_enter_user_name_and_password_and_click_on_login_button() {
+	  
+	}
+
+	@Then("User should be navigated to OrangeHRM Application HomePage")
+	public void user_should_be_navigated_to_orange_hrm_application_home_page() {
+
+	}
+
+	@Then("User should click on WelCome Admin")
+	public void user_should_click_on_wel_come_admin() {
+	   
+	}
+
+	@Then("User should click on logOut")
+	public void user_should_click_on_log_out() {
+		
+	}
+
+
+}

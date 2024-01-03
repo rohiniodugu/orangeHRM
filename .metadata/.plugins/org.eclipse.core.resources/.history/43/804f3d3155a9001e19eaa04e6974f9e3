@@ -1,0 +1,14 @@
+package com.StepDefination;
+
+import org.openqa.selenium.WebDriver;
+
+public class OrangeHRMApplicationMethods {
+    WebDriver driver;
+	String applicationUrlAddress="http://127.0.0.1/orangehrm-4.2.0.1/symfony/web/index.php/dashboard";
+
+	public OrangeHRMApplicationMethods(Hooks hooks)//a class name similar  to method name -it is a constructor 
+	{
+		driver=hook.driver;
+	}
+
+}
